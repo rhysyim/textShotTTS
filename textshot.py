@@ -97,7 +97,7 @@ def processImage(img):
         return
 
     if result:
-        myobj = gTTS(text=result, lang='en', slow=False)
+        myobj = gTTS(text=result, lang=(sys.argv[2] if len(sys.argv) > 2 else 'en'), slow=False)
         myobj.save("recording.mp3")
         playsound.playsound('recording.mp3')
         os.remove('recording.mp3')
