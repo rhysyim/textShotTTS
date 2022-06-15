@@ -1,21 +1,12 @@
-<h1 align="center">TextShot</h1>
-
-<div align="center">
-<a href="https://github.com/ianzhao05/textshot/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ianzhao05/textshot"></a>
-<a href="https://github.com/ianzhao05/textshot/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/ianzhao05/textshot"></a>
-<a href="https://github.com/ianzhao05/textshot/blob/master/LICENSE.txt"><img alt="GitHub license" src="https://img.shields.io/github/license/ianzhao05/textshot"></a>
-<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
-</div>
-
-This tool gives users the ability to take a screenshot and copy to the clipboard the text content of the screenshot. Works on Windows, macOS, and most modern Linux distros.
-
-![TextShot Demo](https://i.imgur.com/Z0Ng13S.gif)
+This tool gives users the ability to take a screenshot and read the text content of the screenshot. Works on Windows, macOS, and most modern Linux distros.
 
 ## Use
 
 Running `textshot.py` with `python`/`python3` will open an overlay over the screen, where a rectangle can be drawn over the portion of the screen containing the text the user wishes to copy.
 
 An optional command line argument can specify the language. For example, `python textshot.py eng+fra` will use English as the primary language and French as the secondary language. The default is `eng` (English). Make sure that the appropriate data files for Tesseract are installed for other languages. A list of all supported languages can be found [here](https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc#languages-and-scripts).
+
+The default language for the text-to-speech function is 'en' (English). 
 
 It is recommended to attach a global hotkey to this tool so you can run it without opening a console and typing in the command.
 
