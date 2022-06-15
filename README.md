@@ -6,7 +6,7 @@ Running `textshot.py` with `python`/`python3` will open an overlay over the scre
 
 An optional command line argument can specify the language. For example, `python textshot.py eng+fra` will use English as the primary language and French as the secondary language. The default is `eng` (English). Make sure that the appropriate data files for Tesseract are installed for other languages. A list of all supported languages can be found [here](https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc#languages-and-scripts).
 
-The default language for the text-to-speech function is 'en' (English). 
+The default language for the text-to-speech function is `en` (English). 
 
 It is recommended to attach a global hotkey to this tool so you can run it without opening a console and typing in the command.
 
