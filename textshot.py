@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
-
 import io
 import sys
+from gtts import gTTS
+import playsound
+import os
 
-import pyperclip
 import pytesseract
 from PIL import Image
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -97,12 +97,13 @@ def processImage(img):
         return
 
     if result:
-        pyperclip.copy(result)
-        print(f'INFO: Copied "{result}" to the clipboard')
-        notify(f'Copied "{result}" to the clipboard')
+        myobj = gTTS(text=result, lang='en', slow=False)
+        myobj.save("recording.mp3")
+        playsound.playsound('recording.mp3')
+        os.remove('recording.mp3')
     else:
-        print(f"INFO: Unable to read text from image, did not copy")
-        notify(f"Unable to read text from image, did not copy")
+        print(f"INFO: Unable to read text from image")
+        notify(f"Unable to read text from image")
 
 
 def notify(msg):
